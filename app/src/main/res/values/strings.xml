@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+    <string name="application_name">Hello blank fragment</string>
+    <string name="weather">Weather</string>
+    <string name="astronomy">Astronomy</string>
+    <string name="synchronization_time_text">Synchronization time</string>
+    <string name="synchronization_time_placeholder">12:34:56</string>
+    <string name="temperature_placeholder">19°C</string>
+    <string name="weather_description_placeholder">Mostly cloudy</string>
+    <string name="forecast">Forecast</string>
+    <string name="todo">TODO</string>
+</resources>

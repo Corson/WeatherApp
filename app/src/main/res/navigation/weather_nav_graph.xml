@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?><!--suppress NavigationFile -->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/weather_nav_graph"
+    app:startDestination="@id/simpleWeatherDataFragment">
+
+    <fragment
+        android:id="@+id/simpleWeatherDataFragment"
+        android:name="com.pawellal.weatherapp.weather.SimpleWeatherDataFragment"
+        android:label="fragment_simple_weather_data"
+        tools:layout="@layout/fragment_simple_weather_data">
+        <action
+            android:id="@+id/action_simpleWeatherDataFragment_to_forecastWeatherDataFragment"
+            app:destination="@id/forecastWeatherDataFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forecastWeatherDataFragment"
+        android:name="com.pawellal.weatherapp.weather.ForecastWeatherDataFragment"
+        android:label="fragment_forecast_weather_data"
+        tools:layout="@layout/fragment_forecast_weather_data">
+        <action
+            android:id="@+id/action_forecastWeatherDataFragment_to_simpleWeatherDataFragment"
+            app:destination="@id/simpleWeatherDataFragment" />
+    </fragment>
+</navigation>

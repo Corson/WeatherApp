@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?><!--suppress NavigationFile -->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav_graph"
+    app:startDestination="@id/mainFragment">
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.pawellal.weatherapp.home.MainFragment"
+        android:label="fragment_home_screen"
+        tools:layout="@layout/fragment_main">
+        <!-- navigation to another graph (without the need to create and change activity) -->
+        <action
+            android:id="@+id/action_home_to_astronomy_nav_graph"
+            app:destination="@id/astronomy_nav_graph" />
+        <!-- navigation to another activity (visual refresh) -->
+        <action
+            android:id="@+id/action_home_to_weatherActivity"
+            app:destination="@id/weatherActivity" />
+    </fragment>
+    <include app:graph="@navigation/astronomy_nav_graph" />
+    <activity
+        android:id="@+id/weatherActivity"
+        android:name="com.pawellal.weatherapp.weather.WeatherActivity"
+        android:label="activity_weather"
+        tools:layout="@layout/activity_weather" />
+</navigation>
